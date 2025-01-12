@@ -18,7 +18,7 @@ to create your environment automatically.
 #### Data poisoning and bias injection.
 - Dog Samples in SBU Captions Dataset
   
-#### Privacy exposure.
+#### Privacy exposure
 - Mnist
 - Cifar10
 
@@ -39,9 +39,9 @@ For Multimodel vision language pre-training model probing samples, we use
 - Generated samples form dreambooth
 
 ### Probing Sample 
-Please put all samples needed to analyze in ```\probing_samples```, for uni-model task, the adv samples, org samples, adv labels, org samples, and org predict labels is needed. We will release probing samples collected by us soon, and provide the cifar sample with fgsm attack with this repo for demo.
+Please put all samples needed to analyze in ```\probing_samples```, for uni-model task, the adv samples, org samples, adv labels, org samples, and org predict labels is needed. We release probing samples collected by us in https://drive.google.com/drive/folders/1esbdww3fvjgRZ3ttboymd668z1idR4Bg?usp=sharing, and provide the cifar sample with fgsm attack with this repo for demo.
 
-Notice that currently, we only provide code for Uni-model extraction, and we will release code for other tasks soon. 
+We provide demo code for Uni-model extraction. 
 
 
 

@@ -1,5 +1,5 @@
-# ConceptPrism
-This is the source code for paper "ConceptPrism: Multimodal Analysis for Evaluating the Trinity of AI Trust". The code is partly based on albef code https://github.com/salesforce/ALBEF.
+# ConceptLens
+This is the source code for paper "What’s Pulling the Strings? Evaluating Integrity and Attribution in AI Training and Inference through Concept Shift". The code is partly based on albef code https://github.com/salesforce/ALBEF.
 
 Our algorithm propose a generic framework that leverages pre-trained multimodal models to identify the root causes of vulnerabilities in these three dimensions by analyzing conceptual shifts in probing samples. 
 
@@ -14,7 +14,16 @@ conda create --name <env> --file requirements.txt
 to create your environment automatically.
 
 ## Dataset
-#### Security Analysis of Models’ Adversarial Faults
+### Data Integrity
+#### Data poisoning and bias injection.
+- Dog Samples in SBU Captions Dataset
+  
+#### Privacy exposure.
+- Mnist
+- Cifar10
+
+### Model Integrity
+#### Adversarial perturbations
 For Unimodel classfier probing samples, we use
 - Mnist
 - Cifar10
@@ -25,10 +34,8 @@ For Multimodel vision language pre-training model probing samples, we use
 - MSCOCO
 - RefCoco+
 - SNLI-VE
-#### Privacy Leakage: Model Membership Audit
-- Mnist
-- Cifar10
-#### Analyzing Bias in Generative Models
+
+#### Toxic and biased generation
 - Generated samples form dreambooth
 
 ### Probing Sample 

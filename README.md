@@ -49,6 +49,7 @@ We provide demo code for Uni-model extraction.
 Please download the 14M pre-trained albef model from: https://github.com/salesforce/ALBEF?tab=readme-ov-file
 
 ## Usage
+
 ### Feature extraction
 To extract features for probing samples above 3 tasks, run: 
 ```
@@ -66,7 +67,19 @@ python feature_extract.py --gpu 0 --cls --config configs/concept_prism.yaml  --c
 
 After running these commands, the extract features metrics will be generate under ```/results/[NAME_PROBING_SAMPLE]```
 
-### Analysis and Visualization
+### Integrity: Anomaly Detection
+To get the results of detection for unimodal attacks, run
+```
+python single_modality_detect.py --adv_name [NAME_PROBING_SAMPLE] 
+
+### Detecting cifar_fgsm probing samples
+python single_modality_detect.py --adv_name cifar_fgsm_0.0625
+```
+The detection results will be printed out.
+We will release the detection tool for other tasks soon.
+
+
+### Attribution: Analysis and Visualization
 Here we provide several tools to analyze the extract features with visualization
 #### Linear abstract feature similarity
 To generate the diagram visualizing the semantic shift of probing sample, run
@@ -86,14 +99,5 @@ python visualize_attention_difference.py --adv_name [NAME_PROBING_SAMPLE] --type
 python visualize_attention_difference.py --adv_name cifar_fgsm_0.0625 --type_data uni
 ```
 It will generate 6 attention map under  ```/visual"```
-#### Detection
-To get the results of detection for unimodal attacks, run
-```
-python single_modality_detect.py --adv_name [NAME_PROBING_SAMPLE] 
 
-### Detecting cifar_fgsm probing samples
-python single_modality_detect.py --adv_name cifar_fgsm_0.0625
-```
-The detection results will be printed out.
-We will release the detection tool for other tasks soon.
 
